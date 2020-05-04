@@ -17,7 +17,7 @@ angular.module('contactApp', []).controller('contactController', function ($scop
                 $scope.items.push($scope.item);
 
             }
-            reset()
+            $scope.reset()
         }
     }
 
@@ -44,7 +44,8 @@ angular.module('contactApp', []).controller('contactController', function ($scop
     }
 
     // reseting the fields
-    reset = () => {
+    $scope.reset = () => {
+       
         $scope.item = {};
         $scope.emailValid = false;
         $scope.item.status = 'active';
