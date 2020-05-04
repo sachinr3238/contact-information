@@ -26,7 +26,9 @@
     cursor: not-allowed;
     pointer-events: none;
 }
-
+.contact-table tbody{
+    height: calc(100vh - 350px);
+}
 .contact-table .icon-edit {
     display: inline-block;
     background: url("../images//icon-edit.png") no-repeat;
@@ -34,9 +36,15 @@
     height: 20px;
 }
 
+
 .contact-table .icon-delete {
     display: inline-block;
     background: url("../images//icon-trash.png") no-repeat;
     width: 20px;
     height: 20px;
+}
+
+.contact-table thead tr th {
+    font-size: 13px;
+    background: #d9e5ef;
 }
