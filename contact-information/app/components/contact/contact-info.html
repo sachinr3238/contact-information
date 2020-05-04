@@ -50,6 +50,8 @@
                             <button type="submit" class="btn btn-success" ng-click="addContact(item)"
                                 ng-disabled="contactForm.$invalid || contactForm.$pristine">Add
                                 Contact</button>
+                                <button type="submit" class="btn btn-warning" ng-disabled="contactForm.$invalid || contactForm.$pristine" ng-click="reset()">Reset
+                                Contact</button>
                         </div>
                     </form>
                 </div>
@@ -71,7 +73,9 @@
                 <tbody>
 
                     <tr ng-if="items.length == 0">
-                        <td class="text-center" colspan="7">NO DATA</td>
+                        <td class="no-data text-center" colspan="7">
+                            <div>NO DATA</div>
+                        </td>
                     </tr>
                     <tr ng-repeat="item in items">
                         <td><span>{{item.firstName}}</span>
